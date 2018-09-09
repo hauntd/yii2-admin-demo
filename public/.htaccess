@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+    RewriteEngine on
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php
+</IfModule>
+
+<FilesMatch "\.(gitignore|htaccess)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+Options All -Indexes

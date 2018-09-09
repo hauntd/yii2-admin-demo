@@ -1,0 +1,18 @@
+{
+    "name": "hauntd/yii2-admin-demo",
+    "description": "Admin Demo App",
+    "keywords": ["admin", "application", "backend", "dashboard"],
+    "homepage": "https://github.com/hauntd/yii2-admin-demo",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "optimize-autoloader": true,
+    "require": {
+        "yiisoft/yii2": "^2.0.15",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0"
+    }
+}
