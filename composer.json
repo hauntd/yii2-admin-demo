@@ -7,9 +7,16 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "optimize-autoloader": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./dashboard"
+        }
+    ],
     "require": {
         "yiisoft/yii2": "^2.0.15",
-        "vlucas/phpdotenv": "^2.4"
+        "vlucas/phpdotenv": "^2.4",
+        "hauntd/yii2-admin": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

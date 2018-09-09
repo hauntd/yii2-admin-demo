@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "56db0f569470f30496e8bd0a673cf883",
+    "content-hash": "25193c05a61c4cf3e85678f4ae79783c",
     "packages": [
         {
             "name": "bower-asset/inputmask",
@@ -271,6 +271,35 @@
                 "html"
             ],
             "time": "2018-02-23T01:58:20+00:00"
+        },
+        {
+            "name": "hauntd/yii2-admin",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./dashboard",
+                "reference": "5423c3905096b87d24c226e412ea5522c7259c0e",
+                "shasum": null
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "bootstrap": "hauntd\\admin\\Bootstrap"
+            },
+            "autoload": {
+                "psr-4": {
+                    "hauntd\\admin\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Kononenko",
+                    "email": "contact@hauntd.me"
+                }
+            ],
+            "description": "Administration module for Yii 2 projects."
         },
         {
             "name": "vlucas/phpdotenv",

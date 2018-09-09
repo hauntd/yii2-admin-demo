@@ -10,6 +10,9 @@ $config = [
         'log',
     ],
     'modules' => [
+        'admin' => [
+            'class' => \hauntd\admin\Module::class,
+        ],
     ],
     'components' => [
         'assetManager' => [
