@@ -11,7 +11,15 @@ $config = [
     ],
     'modules' => [
         'admin' => [
-            'class' => \hauntd\admin\Module::class,
+            'class' => hauntd\admin\Module::class,
+            'controllerMap' => [
+                'custom' => app\modules\admin\controllers\CustomController::class,
+            ],
+            'resourcesPath' => '@app/resources',
+            'resources' => [
+
+            ],
+            'on ' . hauntd\admin\Module::EVENT_AFTER_INIT => [app\modules\admin\Events::class, 'setup'],
         ],
     ],
     'components' => [
@@ -20,6 +28,9 @@ $config = [
             'appendTimestamp' => true,
             'basePath' => '@webroot/content/assets',
             'baseUrl' => '@web/content/assets',
+        ],
+        'cache' => [
+            'class' => yii\caching\FileCache::class,
         ],
         'request' => [
             'cookieValidationKey' => env('APP_COOKIE_VALIDATION_KEY'),
@@ -37,6 +48,10 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'user' => [
+            'identityClass' => app\models\User::class,
+            'enableAutoLogin' => true,
+        ],
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,

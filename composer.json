@@ -7,12 +7,6 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "optimize-autoloader": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "./dashboard"
-        }
-    ],
     "require": {
         "yiisoft/yii2": "^2.0.15",
         "vlucas/phpdotenv": "^2.4",
@@ -21,5 +15,28 @@
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
         "yiisoft/yii2-gii": "~2.0.0"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "./dashboard"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            },
+            "vcs-driver-options": {
+                "github-no-api": true
+            },
+            "pattern-skip-version": "(-build|-patch)"
+        }
     }
 }
