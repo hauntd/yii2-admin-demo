@@ -23,11 +23,10 @@ class Events
             $sidebar->addItem(new LinkSidebarItem([
                 'label' => 'Custom',
                 'url' => Url::to(['custom/index']),
-                'icon' => 'user',
+                'icon' => 'file',
                 'badge' => 'new',
-                'badgeActiveClass' => 'danger',
+                'badgeActiveClass' => 'success',
             ]));
         });
-
     }
 }
